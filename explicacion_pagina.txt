@@ -1,0 +1,135 @@
+# Guía Detallada para Estudiantes de Desarrollo Web: Cómo Funciona Esta Página
+
+¡Bienvenido! Este documento está diseñado especialmente para ayudarte a entender cómo funciona esta página web, tanto en su estructura HTML como en sus estilos CSS. Si eres nuevo en el desarrollo web, esta guía te proporcionará una base sólida para aprender a crear tus propias páginas.
+
+---
+
+## 1. Estructura HTML: El Esqueleto de la Página
+
+HTML (HyperText Markup Language) es el lenguaje que se utiliza para estructurar el contenido de una página web. Piensa en HTML como los cimientos y el marco de una casa: define qué elementos están presentes y cómo se organizan.
+
+### Archivo `PeriodicoDigital.html`
+
+Este es el archivo principal de la página web. A continuación, desglosaremos su estructura:
+
+#### a. **Encabezado (`<header>`)**:
+- Contiene el título principal del sitio web: `<h1>El Periódico Digital</h1>`.
+- También incluye una barra de navegación (`<nav>`), que es una lista de enlaces (`<ul>` y `<li>`) que permiten al usuario moverse entre diferentes secciones del sitio.
+  - Ejemplo: `<a href="#">Inicio</a>` lleva al usuario a la página de inicio.
+  - El enlace `<a href="formulario.html">Formulario</a>` lleva al usuario a la página del formulario.
+
+#### b. **Contenido Principal (`<main>`)**:
+- Aquí es donde se encuentra el "cuerpo" de la página.
+- **Sección Destacada (`<section id="featured">`)**:
+  - Contiene un artículo destacado con un título (`<h2>`), una imagen (`<img>`) y un breve resumen (`<p>`).
+- **Sección de Noticias (`<section id="news">`)**:
+  - Está diseñada para agregar más artículos en el futuro. Actualmente tiene un comentario HTML (`<!-- Aquí irán más artículos -->`) que indica dónde puedes agregar contenido adicional.
+
+#### c. **Pie de Página (`<footer>`)**:
+- Contiene información de contacto básica, como un correo electrónico y un número de teléfono.
+
+---
+
+### Archivo `formulario.html`
+
+Este archivo contiene únicamente el formulario de contacto. Su estructura es más simple:
+- Tiene un encabezado con un título (`<h1>Formulario de Contacto</h1>`) y un enlace para regresar a la página principal.
+- El formulario (`<form>`) incluye varios campos de entrada (`<input>`) y etiquetas (`<label>`):
+  - Ejemplo: `<label for="nombre">Nombre:</label>` describe el campo, y `<input type="text" id="nombre" name="nombre">` permite al usuario ingresar su nombre.
+  - También incluye un botón de envío (`<button type="submit">Enviar</button>`) para enviar los datos.
+
+---
+
+## 2. Estilos CSS: La Pintura de la Casa
+
+CSS (Cascading Style Sheets) es el lenguaje que se utiliza para dar estilo y diseño visual a una página web. Sin CSS, las páginas web serían solo texto plano sin formato.
+
+El archivo `PeriodicoDigitalStyle.css` contiene todos los estilos visuales. A continuación, explicaremos los aspectos más importantes:
+
+### a. **Reset Básico**:
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+```
+- Este bloque elimina los márgenes y rellenos predeterminados de los elementos, lo que garantiza que el diseño sea consistente en diferentes navegadores.
+
+### b. **Diseño General**:
+```css
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+```
+- Define la tipografía (`Arial`), el espaciado entre líneas (`line-height: 1.6`) y el color de fondo (`#f9f9f9`).
+
+### c. **Encabezado**:
+```css
+header {
+    background: #003366;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+```
+- El encabezado tiene un fondo azul oscuro (`#003366`) y texto blanco (`#fff`), lo que lo hace destacar visualmente.
+
+### d. **Barra de Navegación**:
+```css
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+```
+- Los enlaces de navegación están organizados horizontalmente (`display: flex`) con espacio entre ellos (`gap: 20px`).
+
+### e. **Formulario**:
+```css
+#formulario {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+```
+- El formulario tiene un fondo blanco, bordes redondeados (`border-radius: 8px`) y una sombra suave (`box-shadow`) para resaltar.
+
+---
+
+## 3. Integración HTML y CSS: Cómo Trabajan Juntos
+
+El archivo HTML utiliza la etiqueta `<link>` en la sección `<head>` para vincular el archivo CSS:
+```html
+<link rel="stylesheet" href="assets/css/PeriodicoDigitalStyle.css">
+```
+Esto significa que los estilos definidos en el archivo CSS se aplican automáticamente a los elementos HTML.
+
+Por ejemplo:
+- El encabezado (`<header>`) obtiene su color de fondo azul oscuro del archivo CSS.
+- Los campos de entrada del formulario obtienen su diseño limpio y moderno gracias a las reglas CSS.
+
+---
+
+## 4. Navegación entre Páginas
+
+La navegación entre páginas se logra mediante enlaces (`<a>`):
+- En `PeriodicoDigital.html`, el enlace `<a href="formulario.html">Formulario</a>` lleva al usuario a la página del formulario.
+- En `formulario.html`, el enlace `<a href="PeriodicoDigital.html">Volver al Inicio</a>` permite regresar a la página principal.
+
+---
+
+## Consejos para Aprender
+
+1. **Experimenta**: Cambia los colores, fuentes o márgenes en el archivo CSS y observa cómo afecta el diseño.
+2. **Agrega Contenido**: Intenta añadir más artículos en la sección `<section id="news">` de `PeriodicoDigital.html`.
+3. **Valida tu Código**: Usa herramientas como el [Validador de HTML](https://validator.w3.org/) para asegurarte de que tu código cumple con los estándares.
+
+Con práctica y paciencia, ¡dominarás el desarrollo web en poco tiempo!

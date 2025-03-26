@@ -1,0 +1,221 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+  
+    
+}
+
+header {
+    background: #61081b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+header h1 {
+    margin-bottom: 20px;
+}
+header h2{
+    margin-bottom: 20px;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: medium;
+}
+
+main {
+    /* Contenedor principal con Flexbox */
+    display: flex; 
+    gap: 20px; /* Espacio entre las secciones */
+    max-width: 1000px;
+    margin: 50px auto;
+    font-size: small;
+}
+
+/* Estilos para las secciones principales */
+#featured, #featured2, #featured3 {
+    /* Cada sección ocupa la mitad del espacio */
+    flex: 1; 
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+}
+
+/* Cuando la pantalla es pequeña, apilamos las secciones */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Apila verticalmente */
+    }
+    
+    #featured, #featured2, #featured3 {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+}
+
+#featured {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 90%; /* Nuevo ancho ajustable */
+    margin: 20px auto; /* Centrado */
+    position: relative; /* Para posicionar */
+    top: 20px; /* Espaciado superior */
+}
+
+/* Nuevas clases para control de tamaño */
+.featured-small {
+    transform: scale(0.8);
+}
+
+.featured-large {
+    transform: scale(1.2);
+}
+#featured2{
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 90%;
+    margin: 20px auto;
+    position: relative;
+    top: 20px;
+}
+
+#featured3{
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 90%;
+    margin: 20px auto;
+    position: relative;
+    top: 20px;
+}
+
+.highlight img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.highlight2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.highlight3 img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+#formulario {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+#formulario h2 {
+    margin-bottom: 15px;
+    color: #003366;
+}
+
+#formulario label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#formulario input[type="text"],
+#formulario input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#formulario button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#formulario button:hover {
+    background-color: #00264d;
+}
+
+/* Estilos básicos para la noticia principal */
+.main-highlight {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd; /* Borde simple */
+    width: 90%; /* Ancho fijo */
+    margin: 20px auto; /* Centrado automático */
+    text-align: center; /* Alineación de texto */
+}
+
+/* Imagen de la noticia principal */
+.main-highlight img {
+    width: 100%; /* Escala completa */
+    height: auto; /* Mantener proporción */
+}
+
+/* Título de la noticia principal */
+.main-highlight h2 {
+    font-size: 1.5em; /* Tamaño moderado */
+    margin-bottom: 10px; /* Espaciado básico */
+}
+
+/* Párrafo de la noticia principal */
+.main-highlight p {
+    font-size: 1em; /* Tamaño estándar */
+    line-height: 1.4; /* Interlineado básico */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    main {
+        padding: 0 10px;
+    }
+    
+}
