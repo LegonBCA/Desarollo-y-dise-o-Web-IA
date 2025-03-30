@@ -6,216 +6,436 @@
 }
 
 body {
-    
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
     padding: 20px;
-  
+}
+
+/* Estilos del Header Principal */
+.header-principal {
+    /* Dimensiones del header */
+    width: 100%;
+    height: 116px;
     
-}
-
-header {
-    background: #61081b;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-
-header h1 {
-    margin-bottom: 20px;
-}
-header h2{
-    margin-bottom: 20px;
-
-}
-
-nav ul {
-    list-style: none;
+    /* Color de fondo oscuro */
+    background: #131313;
+    
+    /* Posicionamiento y alineación */
+    position: relative;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: medium;
-}
-
-main {
-    /* Contenedor principal con Flexbox */
-    display: flex; 
-    gap: 20px; /* Espacio entre las secciones */
-    max-width: 1000px;
-    margin: 50px auto;
-    font-size: small;
-}
-
-/* Estilos para las secciones principales */
-#featured, #featured2, #featured3 {
-    /* Cada sección ocupa la mitad del espacio */
-    flex: 1; 
-    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
-}
-
-/* Cuando la pantalla es pequeña, apilamos las secciones */
-@media (max-width: 768px) {
-    main {
-        flex-direction: column; /* Apila verticalmente */
-    }
+    align-items: center;
+    justify-content: space-between;
     
-    #featured, #featured2, #featured3 {
-        width: 100%; /* Ocupa todo el ancho disponible */
-    }
+    /* Espaciado interno */
+    padding: 0 100px;
 }
 
-#featured {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 90%; /* Nuevo ancho ajustable */
-    margin: 20px auto; /* Centrado */
-    position: relative; /* Para posicionar */
-    top: 20px; /* Espaciado superior */
+/* Estilos del Logo */
+.logo {
+    /* Dimensiones del logo */
+    width: 122px;
+    height: 49px;
 }
 
-/* Nuevas clases para control de tamaño */
-.featured-small {
-    transform: scale(0.8);
-}
-
-.featured-large {
-    transform: scale(1.2);
-}
-#featured2{
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 90%;
-    margin: 20px auto;
-    position: relative;
-    top: 20px;
-}
-
-#featured3{
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 90%;
-    margin: 20px auto;
-    position: relative;
-    top: 20px;
-}
-
-.highlight img {
+.logo-bg {
+    /* Fondo blanco para el logo */
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-.highlight2 img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-.highlight3 img{
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 100%;
+    background: white;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #666;
+/* Estilos del Menú Principal */
+.menu-principal {
+    /* Centrar el menú */
+    margin: 0 auto;
 }
 
+.menu-principal ul {
+    /* Eliminar puntos de la lista */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    /* Alinear elementos horizontalmente */
+    display: flex;
+    gap: 52px;
+}
+
+.menu-principal a {
+    /* Estilos de los enlaces */
+    color: white;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    
+    /* Espaciado vertical */
+    padding: 10px 0;
+}
+
+/* Estilos del Botón de Contacto */
+.boton-contacto {
+    /* Fondo blanco para el botón */
+    background: white;
+    padding: 10px 24px;
+    border-radius: 4px;
+}
+
+.boton-contacto a {
+    /* Estilos del texto del botón */
+    color: #131313;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* Estilos básicos del formulario */
 #formulario {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-top: 20px;
+    /* Ajusta el ancho máximo del formulario */
+    /* Puedes cambiar 500px por el ancho que prefieras */
+    max-width: 1000px;
+    
+    /* Ajusta la posición del formulario */
+    /* margin: 20px auto; - Centra el formulario */
+    /* margin: 20px 0; - Alinea a la izquierda */
+    /* margin: 20px 0 0 auto; - Alinea a la derecha */
+    margin: 20px auto;
+    
+    /* Espaciado interno del formulario */
+    /* Aumenta o disminuye el padding para más o menos espacio interno */
+    padding: 25px;
+    
+    /* Color de fondo del formulario */
+    background: white;
+    
+    /* Borde del formulario */
+    /* Puedes cambiar el color (#ddd) o el grosor (1px) */
+    border: 1.5px solid #ddd;
+    
+    /* Bordes redondeados */
+    /* Aumenta o disminuye el valor para bordes más o menos redondeados */
+    border-radius: 15px;
 }
 
+/* Estilo del título del formulario */
 #formulario h2 {
+    /* Alineación del título */
+    /* text-align: left; - Alinea a la izquierda */
+    /* text-align: center; - Centra el texto */
+    /* text-align: right; - Alinea a la derecha */
+    text-align: center;
+    
+    /* Espacio debajo del título */
     margin-bottom: 15px;
-    color: #003366;
+    /* Puedo Ajustar el tamaño del Titulo */
+    font-size: 20px;
+    
+    /* Color del texto del título */
+    color: #333;
 }
 
+/* Estilo de las etiquetas del formulario */
 #formulario label {
+    /* Hace que cada etiqueta ocupe una línea completa */
     display: block;
-    margin-top: 10px;
-    font-weight: bold;
+    font-size: 14px;
+    
+    /* Espaciado alrededor de las etiquetas */
+    /* Ajusta los valores para cambiar el espacio */
+    margin: 5px 0 5px;
+    
+    /* Color del texto de las etiquetas */
+    color: #333;
 }
 
+/* Estilo de los campos de texto, email y teléfono */
 #formulario input[type="text"],
-#formulario input[type="password"] {
+#formulario input[type="email"],
+#formulario input[type="tel"],
+#formulario textarea {
+    /* Ancho del campo */
+    /* 100% ocupa todo el ancho disponible */
     width: 100%;
+    
+    /* Espaciado interno del campo */
+    /* Aumenta o disminuye para campos más grandes o pequeños */
     padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    
+    /* Espacio debajo de cada campo */
+    margin-bottom: 12px;
+    
+    /* Borde del campo */
+    /* Cambia el color (#ddd) o el grosor (1px) */
+    border: 1.5px solid #ddd;
+    
+    /* Bordes redondeados */
+    border-radius: 10px;
 }
 
+/* Estilo específico para el área de texto */
+#formulario textarea {
+    /* Permite redimensionar verticalmente */
+    resize: vertical;
+    
+    /* Altura mínima del área de texto */
+    /* Aumenta o disminuye para un área más grande o pequeña */
+    min-height: 150px;
+}
+
+/* Estilo para el campo de archivo */
+#formulario input[type="file"] {
+    /* Espaciado alrededor del campo de archivo */
+    margin: 10px 0;
+}
+
+/* Estilo del botón de envío */
 #formulario button {
-    margin-top: 15px;
-    padding: 10px 15px;
-    background-color: #003366;
-    color: #fff;
+    /* Ancho del botón */
+    /* 100% ocupa todo el ancho disponible */
+    width: 100%;
+    
+    /* Espaciado interno del botón */
+    padding: 10px;
+    
+    /* Color de fondo del botón */
+    background: #333;
+    
+    /* Color del texto del botón */
+    color: white;
+    
+    /* Elimina el borde del botón */
     border: none;
+    
+    /* Bordes redondeados */
     border-radius: 4px;
+    
+    /* Cambia el cursor al pasar sobre el botón */
     cursor: pointer;
 }
 
+/* Efecto al pasar el mouse sobre el botón */
 #formulario button:hover {
-    background-color: #00264d;
+    /* Color de fondo más oscuro al pasar el mouse */
+    background: #444;
+}
+
+/* Contenedor principal de noticias */
+main {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-size: smaller;
+}
+
+h2{
+    font-size: 16px;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    padding-left: 3%;
+}
+
+/* Estilos para todas las noticias */
+#featured, #featured2, #featured3, #featured4, #featured5, #featured6 {
+    width: calc(33.333% - 20px);
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilos para las imágenes */
+.highlight img, .highlight2 img, .highlight3 img, .highlight4 img, .highlight5 img, .highlight6 img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+/* Diseño para móviles */
+@media (max-width: 768px) {
+    #featured, #featured2, #featured3, #featured4, #featured5, #featured6 {
+        width: 100%;
+    }
 }
 
 /* Estilos básicos para la noticia principal */
 .main-highlight {
     background: #fff;
     padding: 20px;
-    border: 1px solid #ddd; /* Borde simple */
-    width: 90%; /* Ancho fijo */
-    margin: 20px auto; /* Centrado automático */
-    text-align: center; /* Alineación de texto */
+    border: 1px solid #ddd;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
 }
 
 /* Imagen de la noticia principal */
 .main-highlight img {
-    width: 100%; /* Escala completa */
-    height: auto; /* Mantener proporción */
+    width: 100%;
+    height: auto;
 }
 
 /* Título de la noticia principal */
 .main-highlight h2 {
-    font-size: 1.5em; /* Tamaño moderado */
-    margin-bottom: 10px; /* Espaciado básico */
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
 /* Párrafo de la noticia principal */
 .main-highlight p {
-    font-size: 1em; /* Tamaño estándar */
-    line-height: 1.4; /* Interlineado básico */
+    font-size: 1em;
+    line-height: 1.4;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+/* Estilos del Footer Principal */
+.footer-principal {
+    /* Dimensiones y color de fondo */
+    width: 100%;
+    height: 284px;
+    background: #252525;
     
-    main {
-        padding: 0 10px;
-    }
-    
+    /* Posicionamiento */
+    position: relative;
+    overflow: hidden;
 }
+
+/* Contenedor del contenido del footer */
+.footer-contenido {
+    /* Centrado y espaciado */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 20px;
+    
+    /* Organización vertical */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Sección del logo y navegación */
+.footer-logo-nav {
+    /* Organización vertical */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Estilos del logo */
+.logo-footer h1 {
+    /* Fuente y color */
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 33px;
+    font-weight: 500;
+    color: #525151;
+    text-transform: capitalize;
+}
+
+/* Menú de navegación del footer */
+.footer-menu ul {
+    /* Eliminar estilos de lista */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    /* Organización horizontal */
+    display: flex;
+    gap: 92px;
+}
+
+.footer-menu a {
+    /* Estilos de los enlaces */
+    color: rgb(41, 38, 38);
+    text-decoration: none;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+/* Iconos de redes sociales */
+.redes-sociales {
+    /* Organización horizontal */
+    display: flex;
+    gap: 18px;
+}
+
+/* Estilos de los iconos de redes sociales */
+.icono-facebook,
+.icono-twitter,
+.icono-instagram,
+.icono-linkedin {
+    /* Dimensiones de los iconos */
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+/* Facebook */
+.icono-facebook {
+    background: #1877F2;
+}
+
+/* Twitter */
+.icono-twitter {
+    background: #1D9BF0;
+    border-radius: 6px;
+}
+
+/* Instagram */
+.icono-instagram {
+    background: linear-gradient(219deg, #AE3DAE 0%, #FF1800 42%);
+}
+
+/* LinkedIn */
+.icono-linkedin {
+    background: #0A66C2;
+}
+
+/* Sección de copyright */
+.copyright {
+    /* Organización horizontal */
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.copyright p {
+    /* Estilos del texto */
+    color: white;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header-principal {
+        padding: 0 20px;
+    }
+    
+    .menu-principal ul {
+        gap: 20px;
+    }
+    
+    .footer-menu ul {
+        gap: 30px;
+    }
+    
+    .footer-contenido {
+        padding: 20px;
+    }
+    
+    #formulario {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+        

@@ -4,22 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Periódico Digital</title>
+    <title>Gaming Periodic Digital</title>
     <link rel="stylesheet" href="assets/css/PeriodicoDigitalStyle.css">
+    <!-- Importamos la fuente Inter de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <h1>El Periódico Digital</h1>
-        <nav>
+    <!-- Header principal -->
+    <header class="header-principal">
+        <!-- Logo -->
+        <div class="logo">
+            <div class="logo-bg"></div>
+        </div>
+
+        <!-- Menú de navegación -->
+        <nav class="menu-principal">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nacional</a></li>
-                <li><a href="#">Internacional</a></li>
-                <li><a href="#">Gaming</a></li>
-                <li><a href="#">Deportes</a></li>
-                <li><a href="formulario.html">Formulario</a></li>
+                <li><a href="#">INICIO</a></li>
+                <li><a href="#">NACIONAL</a></li>
+                <li><a href="#">INTERNACIONAL</a></li>
+                <li><a href="#">GAMING</a></li>
+                <li><a href="#">DEPORTES</a></li>
             </ul>
-        </nav>      
+        </nav>
+
+        <!-- Botón de contacto -->
+        <div class="boton-contacto">
+            <a href="formulario.html">CONTACTO</a>
+        </div>
     </header>
     
     <!-- Noticia Principal -->
@@ -32,37 +45,93 @@
     </section>
     
     <main>
-            <!-- Primera Noticia -->
+        <!-- Primera columna de noticias (1, 2, 3) -->
         <section id="featured">
             <article class="highlight">
                 <h2>Ubisoft agradece a los jugadores la cálida acogida de Assassin's Creed Shadows: 'Esto es solo el principio'</h2>
-                <br>
                 <img src="assets/Image/Noticia11.jpg" alt="Imagen principal">
                 <p>No ha pasado ni una semana desde que Assassin's Creed Shadows se pusiera a la venta para PS5, Xbox Series X/S y PC, pero el título ya se ha convertido en todo un éxito para Ubisoft tras haber superado los 2 millones de jugadores en su primer fin de semana, lo que ha dejado claro que las ganas de explorar el Japón feudal en esta saga se ha impuesto a las diversas polémicas que ciertos sectores han intentado generar en torno a esta entrega.</p>
             </article>
         </section>
-            <!-- Segunda Noticia -->
-        <br>
+
         <section id="featured2">
             <article class="highlight2">
                 <h2>Anunciados los juegos de abril de PS Plus Essential para PS5 y PS4 incluyendo un aclamando juego de RoboCop</h2>
-                <br>
                 <img src="assets/Image/PSPLUS.jpg" alt="Imagen Secundaria">
                 <p>Los juegos de abril de 2025 en PlayStation Plus Essential son tres en total y estarán disponibles para todos los suscriptores del servicio (independientemente del plan al que estén suscritos) el próximo martes 1 de abril. Estos son los videojuegos seleccionados:</p>
             </article>
         </section>
-            <!-- Tercera Noticia -->
+
         <section id="featured3">
             <article class="highlight3">
                 <h2>Los creadores de Disco Elysium ven una 'competencia amistosa' en los proyectos de exmiembros del estudio</h2>
-                <br>
                 <img src="assets/Image/Noticia13.jpg" alt="Tercera Imagen">
                 <p>En los últimos años, tras la debacle de ZA/UM en 2021 y la marcha de muchos de los desarrolladores de Disco Elysium, varios estudios quieren ser el sucesor espiritual del RPG narrativo. Hopetown, XXX NIGHTSHIFT, Eternal Summer e incluso C4 de la propia ZA/UM (más una adaptación de Disco Elysium en móviles). La desarrolladora describe esta competencia de "amistosa".</p>
-            </article>        </section>
+            </article>
+        </section>
+
+        <!-- Segunda columna de noticias (4, 5, 6) -->
+        <section id="featured4">
+            <article class="highlight4">
+                <h2>Assassin's Creed Shadows zanja la polémica: ¿Quién mancha todo con pintura amarilla en los videojuegos?</h2>
+                <img src="assets/Image/Notice01.jpg.webp" alt="Cuarta Imagen">
+                <p>Ubisoft ha dado en el clavo con Assassin's Creed Shadows. El escepticismo después de varios retrasos a su fecha de estreno y algunas críticas de ciertos sectores del público no han impedido que se convierta en un éxito incuestionable.</p>
+            </article>
+        </section>
+
+        <section id="featured5">
+            <article class="highlight5">
+                <h2>Nuevo trailer de GTA VI muestra más detalles del mundo abierto</h2>
+                <img src="assets/Image/Noticia15.jpg" alt="Quinta Imagen">
+                <p>Rockstar Games ha compartido un nuevo trailer de GTA VI que muestra más detalles del mundo abierto y las nuevas mecánicas de juego que podremos disfrutar en la próxima entrega de la saga.</p>
+            </article>
+        </section>
+
+        <section id="featured6">
+            <article class="highlight6">
+                <h2>Nintendo anuncia nueva consola para 2025</h2>
+                <img src="assets/Image/Noticia16.jpg" alt="Sexta Imagen">
+                <p>Nintendo ha anunciado oficialmente el desarrollo de su próxima consola, que llegará al mercado en 2025. La compañía promete una experiencia de juego revolucionaria.</p>
+            </article>
+        </section>
     </main>
     
-    <footer>
-        <p>Contacto: info@elperiodico.com | Tel: 123-456-789</p>
+    <!-- Footer Principal -->
+    <footer class="footer-principal">
+        <!-- Contenedor del contenido del footer -->
+        <div class="footer-contenido">
+            <!-- Logo y navegación -->
+            <div class="footer-logo-nav">
+                <!-- Logo -->
+                <div class="logo-footer">
+                    <h1>LOGO</h1>
+                </div>
+
+                <!-- Menú de navegación -->
+                <nav class="footer-menu">
+                    <ul>
+                        <li><a href="#">BUTTON</a></li>
+                        <li><a href="#">BUTTON</a></li>
+                        <li><a href="#">BUTTON</a></li>
+                        <li><a href="#">BUTTON</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Iconos de redes sociales -->
+                <div class="redes-sociales">
+                    <a href="#" class="icono-facebook"></a>
+                    <a href="#" class="icono-twitter"></a>
+                    <a href="#" class="icono-instagram"></a>
+                    <a href="#" class="icono-linkedin"></a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright">
+                <div class="icono-copyright"></div>
+                <p>2023 Estrella Inc. All rights reserved</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
