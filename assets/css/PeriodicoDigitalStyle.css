@@ -181,79 +181,104 @@ body {
     }
 }
 
-/* Estilos básicos del formulario */
+/* Contenedor principal del formulario */
+.main-formulario {
+    display: flex;                  /* Usamos flexbox para centrar */
+    justify-content: center;        /* Centra horizontalmente */
+    padding: 20px;                  /* Espacio alrededor */
+    margin-top: 100px;             /* Espacio para el header fijo */
+}
+
+/* Estilos del formulario */
 #formulario {
-    max-width: 1000px;              /* Ancho máximo */
-    margin: 120px auto 20px;        /* Márgenes */
-    padding: 25px;                  /* Espaciado interno */
-    background: #ffffff;            /* Fondo blanco */
-    border: 1.5px solid #e0e0e0;    /* Borde suave */
-    border-radius: 15px;            /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+    width: 100%;                    /* Ocupa el ancho disponible */
+    max-width: 500px;              /* Limita el ancho máximo */
+    padding: 30px;                 /* Espacio interno */
+    background: #ffffff;           /* Fondo blanco */
+    border-radius: 10px;           /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra suave */
 }
 
-/* Estilo del título del formulario */
+/* Título del formulario */
 #formulario h2 {
-    text-align: center;             /* Centrado */
-    margin-bottom: 15px;            /* Espacio inferior */
-    font-size: 20px;                /* Tamaño de fuente */
-    color: #1a1f3c;                 /* Color del texto */
+    text-align: center;            /* Centra el texto */
+    margin-bottom: 30px;           /* Espacio debajo del título */
+    color: #1a1f3c;               /* Color del texto */
+    font-size: 24px;              /* Tamaño de fuente */
 }
 
-/* Estilo de las etiquetas del formulario */
+/* Contenedor del formulario */
+#formulario form {
+    display: flex;                 /* Usamos flexbox */
+    flex-direction: column;        /* Organiza elementos en columna */
+    gap: 15px;                    /* Espacio entre elementos */
+}
+
+/* Etiquetas de los campos */
 #formulario label {
-    display: block;                 /* Comportamiento de bloque */
-    font-size: 14px;                /* Tamaño de fuente */
-    margin: 5px 0 5px;              /* Márgenes */
-    color: #333333;                 /* Color del texto */
+    font-weight: 500;             /* Peso de la fuente */
+    color: #333333;               /* Color del texto */
+    margin-bottom: 5px;           /* Espacio debajo de etiquetas */
 }
 
-/* Estilo de los campos de entrada */
+/* Campos de entrada y área de texto */
 #formulario input[type="text"],
 #formulario input[type="email"],
 #formulario input[type="tel"],
 #formulario textarea {
-    width: 100%;                    /* Ancho completo */
-    padding: 8px;                   /* Espaciado interno */
-    margin-bottom: 12px;            /* Espacio inferior */
-    border: 1.5px solid #e0e0e0;    /* Borde suave */
-    border-radius: 10px;            /* Bordes redondeados */
-    transition: border-color 0.3s ease; /* Transición suave */
+    width: 100%;                  /* Ancho completo */
+    padding: 10px;                /* Espacio interno */
+    border: 1px solid #ddd;       /* Borde suave */
+    border-radius: 5px;           /* Bordes redondeados */
+    font-size: 14px;             /* Tamaño de fuente */
 }
 
-/* Efecto focus en los campos */
+/* Estilo al enfocar los campos */
 #formulario input:focus,
 #formulario textarea:focus {
-    border-color: #4a90e2;          /* Borde azul al enfocar */
-    outline: none;                  /* Elimina el contorno por defecto */
+    outline: none;                /* Quita el contorno por defecto */
+    border-color: #4a90e2;       /* Borde azul al enfocar */
+    box-shadow: 0 0 5px rgba(74,144,226,0.2); /* Sombra suave al enfocar */
 }
 
-/* Estilo específico para el área de texto */
+/* Área de texto */
 #formulario textarea {
-    resize: vertical;               /* Permite redimensionar verticalmente */
-    min-height: 150px;              /* Altura mínima */
+    resize: vertical;             /* Solo permite redimensionar verticalmente */
+    min-height: 100px;           /* Altura mínima */
 }
 
-/* Estilo para el campo de archivo */
+/* Campo de archivo */
 #formulario input[type="file"] {
-    margin: 10px 0;                 /* Márgenes */
+    padding: 5px 0;              /* Espacio arriba y abajo */
 }
 
-/* Estilo del botón de envío */
+/* Botón de envío */
 #formulario button {
-    width: 100%;                    /* Ancho completo */
-    padding: 10px;                  /* Espaciado interno */
-    background: #4a90e2;            /* Color de fondo */
-    color: white;                   /* Color del texto */
-    border: none;                   /* Sin borde */
-    border-radius: 4px;             /* Bordes redondeados */
-    cursor: pointer;                /* Cursor tipo mano */
-    transition: background-color 0.3s ease; /* Transición suave */
+    width: 100%;                 /* Ancho completo */
+    padding: 12px;               /* Espacio interno */
+    background: #4a90e2;         /* Color de fondo */
+    color: white;                /* Color del texto */
+    border: none;                /* Sin borde */
+    border-radius: 5px;          /* Bordes redondeados */
+    font-size: 16px;            /* Tamaño de fuente */
+    cursor: pointer;             /* Cursor tipo mano */
+    transition: background-color 0.3s; /* Transición suave */
 }
 
 /* Efecto hover en el botón */
 #formulario button:hover {
-    background: #357abd;            /* Color más oscuro al hover */
+    background: #357abd;         /* Color más oscuro al pasar el mouse */
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .main-formulario {
+        padding: 15px;           /* Menos espacio en móviles */
+    }
+    
+    #formulario {
+        padding: 20px;           /* Menos padding en móviles */
+    }
 }
 
 /* Contenedor principal de noticias */
