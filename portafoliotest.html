@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Benjamin Contreras - Desarrollador de Software">
+    <meta name="keywords" content="desarrollo web, software, programación, seguridad informática, bases de datos">
+    <meta name="author" content="Benjamin Contreras">
+    <title>Benjamin Contreras | Desarrollador de Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/portafoliotest.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-text">BC</span>
+            <span class="logo-full">Benjamin Contreras</span>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="hablame" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <div class="greeting">👋 Hola, soy</div>
+                <h1>Benjamin <span>Contreras</span></h1>
+                <h2>Desarrollador de Software</h2>
+                <p>
+                    Informático especializado en seguridad en sistemas, bases de datos y 
+                    desarrollo de software. Me apasiona crear soluciones eficientes y 
+                    proteger la información. Actualmente, me enfoco en expandir mis 
+                    conocimientos en estas áreas para ofrecer soluciones innovadoras.
+                </p>
+                <div class="buttons">
+                    <a href="#" class="download-cv">
+                        <i class="fas fa-download"></i>
+                        Descargar CV
+                    </a>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-container">
+                <div class="photo-circle">
+                    <div class="circle-gradient outer"></div>
+                    <div class="circle-gradient inner"></div>
+                    <div class="photo-frame">
+                        <img src="assets/Image/profile.jpg" alt="Benjamin Contreras" class="profile-photo">
+                    </div>
+                    <div class="tech-stack">
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>React</span>
+                    </div>
+                </div>
+                <div class="experience-badge">
+                    <span class="years">5+</span>
+                    <span class="text">Años de<br>Experiencia</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> benjamin@example.com</p>
+                    <p><i class="fas fa-phone"></i> +123 456 789</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Santiago, Chile</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre Mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <div class="social-links-footer">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Benjamin Contreras. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth scroll para la navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Animación de aparición al scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html> 

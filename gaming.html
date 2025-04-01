@@ -1,74 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming - The Gaming Periodic Digital</title>
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Las últimas noticias y actualizaciones del mundo gaming">
+    <meta name="keywords" content="gaming, videojuegos, noticias gaming, juegos, PC gaming">
+    <!-- Título del sitio -->
+    <title>Gaming | El Periódico Digital</title>
+    <!-- Vinculación de estilos CSS -->
     <link rel="stylesheet" href="assets/css/PeriodicoDigitalStyle.css">
+    <!-- Importación de fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-    <!-- Header principal -->
+    <!-- Header principal - Barra de navegación superior -->
     <header class="header-principal">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="assets/Image/logo.png" alt="Logo del Periódico Digital">
-        </div>
+        <!-- Contenedor del header para mejor control del ancho -->
+        <div class="header-container">
+            <!-- Logo del sitio con efecto hover -->
+            <div class="logo">
+                <a href="PeriodicoDigital.html">
+                    <img src="assets/Image/logo.png" alt="Logo del Periódico Digital">
+                </a>
+            </div>
 
-        <!-- Menú de navegación -->
-        <nav class="menu-principal">
-            <ul>
-                <li><a href="PeriodicoDigital.html">INICIO</a></li>
-                <li><a href="gaming.html">GAMING</a></li>
-                <li><a href="esports.html">ESPORTS</a></li>
-                <li><a href="consolas.html">CONSOLAS</a></li>
-                <li><a href="reviews.html">REVIEWS</a></li>
-            </ul>
-        </nav>
+            <!-- Menú de navegación principal -->
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="PeriodicoDigital.html"><i class="fas fa-home"></i> INICIO</a></li>
+                    <li><a href="gaming.html" class="active"><i class="fas fa-gamepad"></i> GAMING</a></li>
+                    <li><a href="esports.html"><i class="fas fa-trophy"></i> ESPORTS</a></li>
+                    <li><a href="consolas.html"><i class="fas fa-tv"></i> CONSOLAS</a></li>
+                    <li><a href="reviews.html"><i class="fas fa-star"></i> REVIEWS</a></li>
+                </ul>
+            </nav>
 
-        <!-- Botón de contacto -->
-        <div class="boton-contacto">
-            <a href="formulario.html">CONTACTO</a>
+            <!-- Botón de contacto con efecto hover -->
+            <div class="boton-contacto">
+                <a href="formulario.html">
+                    <i class="fas fa-envelope"></i> CONTACTO
+                </a>
+            </div>
         </div>
     </header>
 
     <main>
-        <h1>Noticias de Gaming</h1>
-        <!-- Aquí irá el contenido específico de gaming -->
+        <!-- Noticias de Gaming -->
+        <section id="featured">
+            <div class="highlight">
+                <span class="category-tag gaming">Gaming</span>
+                <h2>Ubisoft agradece a los jugadores la cálida acogida de Assassin's Creed Shadows: 'Esto es solo el principio'</h2>
+                <img src="assets/Image/Noticia11.jpg" alt="Imagen principal">
+                <p>No ha pasado ni una semana desde que Assassin's Creed Shadows se pusiera a la venta para PS5, Xbox Series X/S y PC, pero el título ya se ha convertido en todo un éxito para Ubisoft tras haber superado los 2 millones de jugadores en su primer fin de semana.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
+
+        <section id="featured2">
+            <div class="highlight2">
+                <span class="category-tag gaming">Gaming</span>
+                <h2>Los creadores de Disco Elysium ven una 'competencia amistosa' en los proyectos de exmiembros del estudio</h2>
+                <img src="assets/Image/Noticia13.jpg" alt="Tercera Imagen">
+                <p>En los últimos años, tras la debacle de ZA/UM en 2021 y la marcha de muchos de los desarrolladores de Disco Elysium, varios estudios quieren ser el sucesor espiritual del RPG narrativo.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
+
+        <section id="featured3">
+            <div class="highlight3">
+                <span class="category-tag gaming">Gaming</span>
+                <h2>Cyberpunk 2077: Phantom Liberty - La expansión que redime al juego</h2>
+                <img src="assets/Image/Noticia4.jpg" alt="Imagen de Cyberpunk">
+                <p>La nueva expansión de Cyberpunk 2077 trae mejoras significativas y una historia cautivadora que reivindica el potencial del juego. Los jugadores se sumergen en una nueva aventura que expande el universo de Night City.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
+
+        <section id="featured4">
+            <div class="highlight4">
+                <span class="category-tag gaming">Gaming</span>
+                <h2>Starfield: Los jugadores descubren planetas únicos</h2>
+                <img src="assets/Image/Noticia5.jpg" alt="Imagen de Starfield">
+                <p>La exploración espacial en Starfield continúa sorprendiendo con planetas generados proceduralmente que ofrecen experiencias únicas. Los jugadores comparten sus descubrimientos más asombrosos.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
+
+        <section id="featured5">
+            <div class="highlight5">
+                <span class="category-tag gaming">Gaming</span>
+                <h2>Baldur's Gate 3: El RPG del año que revoluciona el género</h2>
+                <img src="assets/Image/Noticia6.jpg" alt="Imagen de Baldur's Gate">
+                <p>Larian Studios redefine el género RPG con una narrativa profunda y sistemas de combate innovadores. El juego ha sido aclamado por la crítica y los jugadores.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
+
+        <section id="featured6">
+            <div class="highlight6">
+                <span class="category-tag gaming">Gaming</span>
+                <h2>Alan Wake 2: La secuela que supera al original</h2>
+                <img src="assets/Image/Noticia7.jpg" alt="Imagen de Alan Wake">
+                <p>Remedy Entertainment entrega una secuela que mejora en todos los aspectos al juego original, con una narrativa psicológica más profunda y gráficos de última generación.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
+
+        <section id="featured7">
+            <div class="highlight7">
+                <span class="category-tag gaming">Gaming</span>
+                <h2>Lies of P: El soulslike que conquista a los jugadores</h2>
+                <img src="assets/Image/Noticia8.jpg" alt="Imagen de Lies of P">
+                <p>Una reinterpretación única de Pinocho en el género soulslike que sorprende por su calidad y originalidad. El juego ha recibido elogios por su diseño de niveles y combate.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer - Pie de página -->
     <footer class="footer-principal">
         <!-- Contenedor del contenido del footer -->
         <div class="footer-contenido">
-            <!-- Logo y navegación -->
+            <!-- Sección del logo y navegación -->
             <div class="footer-logo-nav">
-                <!-- Logo -->
+                <!-- Logo del footer -->
                 <div class="logo-footer">
                     <img src="assets/Image/logo.png" alt="Logo del Periódico Digital">
                 </div>
 
-                <!-- Menú de navegación -->
+                <!-- Menú de navegación del footer -->
                 <nav class="footer-menu">
                     <ul>
-                        <li><a href="#">BUTTON</a></li>
-                        <li><a href="#">BUTTON</a></li>
-                        <li><a href="#">BUTTON</a></li>
-                        <li><a href="#">BUTTON</a></li>
+                        <li><a href="PeriodicoDigital.html">Inicio</a></li>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="esports.html">Esports</a></li>
+                        <li><a href="consolas.html">Consolas</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
                     </ul>
                 </nav>
 
                 <!-- Iconos de redes sociales -->
                 <div class="redes-sociales">
-                    <a href="#"><img src="assets/Image/icons8-facebook-48.png" alt="Facebook"></a>
-                    <a href="#"><img src="assets/Image/icons8-twitter-48.png" alt="Twitter"></a>
-                    <a href="#"><img src="assets/Image/icons8-instagram-48.png" alt="Instagram"></a>
-                    <a href="#"><img src="assets/Image/icons8-twitch-48.png" alt="Twitch"></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitch"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
 
-            <!-- Copyright -->
+            <!-- Sección de copyright -->
             <div class="copyright">
-                <div class="icono-copyright"></div>
-                <p>2023 Estrella Inc. All rights reserved</p>
+                <p>&copy; 2025 Digital Gaming News. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

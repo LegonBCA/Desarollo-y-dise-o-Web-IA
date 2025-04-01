@@ -1,73 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consolas - The Gaming Periodic Digital</title>
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Las últimas noticias y actualizaciones sobre consolas de videojuegos">
+    <meta name="keywords" content="consolas, PlayStation, Xbox, Nintendo, videojuegos, gaming">
+    <!-- Título del sitio -->
+    <title>Consolas | El Periódico Digital</title>
+    <!-- Vinculación de estilos CSS -->
     <link rel="stylesheet" href="assets/css/PeriodicoDigitalStyle.css">
+    <!-- Importación de fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-    <!-- Header principal -->
+    <!-- Header principal - Barra de navegación superior -->
     <header class="header-principal">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="assets/Image/logo.png" alt="Logo del Periódico Digital">
-        </div>
+        <!-- Contenedor del header para mejor control del ancho -->
+        <div class="header-container">
+            <!-- Logo del sitio con efecto hover -->
+            <div class="logo">
+                <a href="PeriodicoDigital.html">
+                    <img src="assets/Image/logo.png" alt="Logo del Periódico Digital">
+                </a>
+            </div>
 
-        <!-- Menú de navegación -->
-        <nav class="menu-principal">
-            <ul>
-                <li><a href="PeriodicoDigital.html">INICIO</a></li>
-                <li><a href="gaming.html">GAMING</a></li>
-                <li><a href="esports.html">ESPORTS</a></li>
-                <li><a href="consolas.html">CONSOLAS</a></li>
-                <li><a href="reviews.html">REVIEWS</a></li>
-            </ul>
-        </nav>
+            <!-- Menú de navegación principal -->
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="PeriodicoDigital.html"><i class="fas fa-home"></i> INICIO</a></li>
+                    <li><a href="gaming.html"><i class="fas fa-gamepad"></i> GAMING</a></li>
+                    <li><a href="esports.html"><i class="fas fa-trophy"></i> ESPORTS</a></li>
+                    <li><a href="consolas.html" class="active"><i class="fas fa-tv"></i> CONSOLAS</a></li>
+                    <li><a href="reviews.html"><i class="fas fa-star"></i> REVIEWS</a></li>
+                </ul>
+            </nav>
 
-        <!-- Botón de contacto -->
-        <div class="boton-contacto">
-            <a href="formulario.html">CONTACTO</a>
+            <!-- Botón de contacto con efecto hover -->
+            <div class="boton-contacto">
+                <a href="formulario.html">
+                    <i class="fas fa-envelope"></i> CONTACTO
+                </a>
+            </div>
         </div>
     </header>
 
     <main>
-        <h1>Noticias de Consolas</h1>
-        <!-- Aquí irá el contenido específico de consolas -->
+        <!-- Noticias de Consolas -->
+        <section id="featured">
+            <div class="highlight">
+                <span class="category-tag consolas">Consolas</span>
+                <h2>Anunciados los juegos de abril de PS Plus Essential para PS5 y PS4 incluyendo un aclamando juego de RoboCop</h2>
+                <img src="assets/Image/PSPLUS.jpg" alt="Imagen Secundaria">
+                <p>Los juegos de abril de 2025 en PlayStation Plus Essential son tres en total y estarán disponibles para todos los suscriptores del servicio (independientemente del plan al que estén suscritos) el próximo martes 1 de abril.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
+
+        <section id="featured2">
+            <div class="highlight2">
+                <span class="category-tag consolas">Consolas</span>
+                <h2>El expresidente de los estudios de PlayStation se sincera sobre por qué Sony cerró Japan Studio</h2>
+                <img src="assets/Image/god.jpg.webp" alt="Quinta Imagen">
+                <p>Sony cerró Japan Studio a principios de 2021. Parte del equipo se integró en un Team Asobi ampliado que el año pasado lanzó el galardonado Astro Bot. Otros desarrolladores se marcharon de SIE.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
+
+        <section id="featured3">
+            <div class="highlight3">
+                <span class="category-tag consolas">Consolas</span>
+                <h2>PS5 Slim: La nueva versión más compacta</h2>
+                <img src="assets/Image/Noticia4.jpg" alt="Imagen de PS5 Slim">
+                <p>Sony presenta una versión más delgada y ligera de su consola insignia, manteniendo toda su potencia. El nuevo diseño revoluciona la forma en que concebimos las consolas de nueva generación.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
+
+        <section id="featured4">
+            <div class="highlight4">
+                <span class="category-tag consolas">Consolas</span>
+                <h2>Xbox Series X|S: Actualización de diseño</h2>
+                <img src="assets/Image/Noticia5.jpg" alt="Imagen de Xbox">
+                <p>Microsoft presenta una nueva versión de sus consolas con mejoras en el diseño y la eficiencia energética. Los cambios incluyen una mejor ventilación y un diseño más moderno.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
+
+        <section id="featured5">
+            <div class="highlight5">
+                <span class="category-tag consolas">Consolas</span>
+                <h2>Nintendo Switch 2: Los primeros detalles</h2>
+                <img src="assets/Image/Noticia6.jpg" alt="Imagen de Nintendo Switch">
+                <p>Filtraciones sugieren que la próxima consola de Nintendo podría llegar en 2024 con mejoras significativas. La nueva generación promete revolucionar la experiencia de juego portátil.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
+
+        <section id="featured6">
+            <div class="highlight6">
+                <span class="category-tag consolas">Consolas</span>
+                <h2>Steam Deck OLED: La versión mejorada</h2>
+                <img src="assets/Image/Noticia7.jpg" alt="Imagen de Steam Deck">
+                <p>Valve presenta una versión mejorada de su consola portátil con pantalla OLED y mejor batería. La nueva versión ofrece una experiencia visual superior y mayor duración de juego.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
+
+        <section id="featured7">
+            <div class="highlight7">
+                <span class="category-tag consolas">Consolas</span>
+                <h2>PlayStation Portal: La nueva apuesta de Sony</h2>
+                <img src="assets/Image/Noticia8.jpg" alt="Imagen de PlayStation Portal">
+                <p>Sony lanza su dispositivo de streaming remoto para PS5, permitiendo jugar desde cualquier lugar. La nueva tecnología de streaming promete una experiencia sin latencia.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer - Pie de página -->
     <footer class="footer-principal">
         <!-- Contenedor del contenido del footer -->
         <div class="footer-contenido">
-            <!-- Logo y navegación -->
+            <!-- Sección del logo y navegación -->
             <div class="footer-logo-nav">
-                <!-- Logo -->
+                <!-- Logo del footer -->
                 <div class="logo-footer">
                     <img src="assets/Image/logo.png" alt="Logo del Periódico Digital">
                 </div>
 
-                <!-- Menú de navegación -->
+                <!-- Menú de navegación del footer -->
                 <nav class="footer-menu">
                     <ul>
-                        <li><a href="#">BUTTON</a></li>
-                        <li><a href="#">BUTTON</a></li>
-                        <li><a href="#">BUTTON</a></li>
-                        <li><a href="#">BUTTON</a></li>
+                        <li><a href="PeriodicoDigital.html">Inicio</a></li>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="esports.html">Esports</a></li>
+                        <li><a href="consolas.html">Consolas</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
                     </ul>
                 </nav>
 
                 <!-- Iconos de redes sociales -->
                 <div class="redes-sociales">
-                    <a href="#"><img src="assets/Image/icons8-facebook-48.png" alt="Facebook"></a>
-                    <a href="#"><img src="assets/Image/icons8-twitter-48.png" alt="Twitter"></a>
-                    <a href="#"><img src="assets/Image/icons8-instagram-48.png" alt="Instagram"></a>
-                    <a href="#"><img src="assets/Image/icons8-twitch-48.png" alt="Twitch"></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitch"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
 
-            <!-- Copyright -->
+            <!-- Sección de copyright -->
             <div class="copyright">
-                <div class="icono-copyright"></div>
-                <p>2023 Estrella Inc. All rights reserved</p>
+                <p>&copy; 2025 Digital Gaming News. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>

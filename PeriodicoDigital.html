@@ -1,133 +1,242 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración básica del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Periódico Digital</title>
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Tu fuente de noticias gaming, esports, consolas y reviews más confiable">
+    <meta name="keywords" content="gaming, esports, consolas, reviews, videojuegos">
+    <!-- Título del sitio -->
+    <title>El Periódico Digital | Tu fuente de noticias gaming</title>
+    <!-- Vinculación de estilos CSS -->
     <link rel="stylesheet" href="assets/css/PeriodicoDigitalStyle.css">
-    <!-- Importamos la fuente Inter de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <!-- Importación de fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header principal -->
+    <!-- Header principal - Barra de navegación superior -->
     <header class="header-principal">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="assets/Image/logo.png" alt="Logo del Periódico Digital">
-        </div>
+        <!-- Contenedor del header para mejor control del ancho -->
+        <div class="header-container">
+            <!-- Logo del sitio con efecto hover -->
+            <div class="logo">
+                <a href="PeriodicoDigital.html">
+                    <img src="assets/Image/logo.png" alt="Logo del Periódico Digital">
+                </a>
+            </div>
 
-        <!-- Menú de navegación -->
-        <nav class="menu-principal">
-            <ul>
-                <li><a href="PeriodicoDigital.html">INICIO</a></li>
-                <li><a href="gaming.html">GAMING</a></li>
-                <li><a href="esports.html">ESPORTS</a></li>
-                <li><a href="consolas.html">CONSOLAS</a></li>
-                <li><a href="reviews.html">REVIEWS</a></li>
-            </ul>
-        </nav>
+            <!-- Menú de navegación principal -->
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="PeriodicoDigital.html" class="active"><i class="fas fa-home"></i> INICIO</a></li>
+                    <li><a href="gaming.html"><i class="fas fa-gamepad"></i> GAMING</a></li>
+                    <li><a href="esports.html"><i class="fas fa-trophy"></i> ESPORTS</a></li>
+                    <li><a href="consolas.html"><i class="fas fa-tv"></i> CONSOLAS</a></li>
+                    <li><a href="reviews.html"><i class="fas fa-star"></i> REVIEWS</a></li>
+                </ul>
+            </nav>
 
-        <!-- Botón de contacto -->
-        <div class="boton-contacto">
-            <a href="formulario.html">CONTACTO</a>
+            <!-- Botón de contacto con efecto hover -->
+            <div class="boton-contacto">
+                <a href="formulario.html">
+                    <i class="fas fa-envelope"></i> CONTACTO
+                </a>
+            </div>
         </div>
     </header>
     
-    <!-- Noticia Principal -->
-    <section class="main-highlight">
-        <img src="assets/Image/GamingNotice12.jpg" alt="Noticia Principal">
-        <h2>Nuevas ventajas para suscriptores de Xbox Game Pass: Ahora habrá más recompensas en juegos free-to-play</h2>
-        <p>Microsoft ha anunciado que a partir de esta semana vamos a poder disfrutar de nuevos beneficios en varios juegos gratuitos por nuestra suscripción a Xbox Game Pass Ultimate o PC Game Pass, permitiéndonos así obtener cosas como objetos cosméticos, personajes o monedas adicionales de nuestros títulos favoritos.
-d
-        </p>
-    </section>
+    <!-- Carrusel de noticias principales -->
+    <div class="carousel-container">
+        <!-- Contenedor de las diapositivas -->
+        <div class="carousel-slides">
+            <!-- Primera diapositiva -->
+            <div class="slide">
+                <img src="assets/Image/GamingNotice12.jpg" alt="Noticia 1">
+                <div class="slide-content">
+                    <h2>Nuevas ventajas para suscriptores de Xbox Game Pass</h2>
+                    <p>Microsoft ha anunciado nuevos beneficios en juegos gratuitos para suscriptores de Xbox Game Pass.</p>
+                </div>
+            </div>
+            <!-- Segunda diapositiva -->
+            <div class="slide">
+                <img src="assets/Image/Noticia11.jpg" alt="Noticia 2">
+                <div class="slide-content">
+                    <h2>Assassin's Creed Shadows: Éxito rotundo</h2>
+                    <p>El título supera los 2 millones de jugadores en su primer fin de semana.</p>
+                </div>
+            </div>
+            <!-- Tercera diapositiva -->
+            <div class="slide">
+                <img src="assets/Image/PSPLUS.jpg" alt="Noticia 3">
+                <div class="slide-content">
+                    <h2>Nuevos juegos en PS Plus Essential</h2>
+                    <p>Anunciados los juegos de abril 2025 para PlayStation Plus.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Botones de navegación -->
+        <button class="carousel-button prev">❮</button>
+        <button class="carousel-button next">❯</button>
+        <!-- Indicadores de diapositiva -->
+        <div class="carousel-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </div>
     
+    <!-- Contenido principal - Grid de noticias -->
     <main>
-        <!-- Primera columna de noticias (1, 2, 3) -->
+        <!-- Primera columna de noticias -->
         <section id="featured">
             <article class="highlight">
+                <div class="category-tag gaming">Gaming</div>
                 <h2>Ubisoft agradece a los jugadores la cálida acogida de Assassin's Creed Shadows: 'Esto es solo el principio'</h2>
-                <img src="assets/Image/Noticia11.jpg" alt="Imagen principal">
+                <img src="assets/Image/Noticia11.jpg" alt="Imagen de Assassin's Creed Shadows">
                 <p>No ha pasado ni una semana desde que Assassin's Creed Shadows se pusiera a la venta para PS5, Xbox Series X/S y PC, pero el título ya se ha convertido en todo un éxito para Ubisoft tras haber superado los 2 millones de jugadores en su primer fin de semana, lo que ha dejado claro que las ganas de explorar el Japón feudal en esta saga se ha impuesto a las diversas polémicas que ciertos sectores han intentado generar en torno a esta entrega.</p>
+                <a href="gaming.html" class="read-more">Leer más →</a>
             </article>
         </section>
 
+        <!-- Segunda noticia -->
         <section id="featured2">
             <article class="highlight2">
+                <div class="category-tag consolas">Consolas</div>
                 <h2>Anunciados los juegos de abril de PS Plus Essential para PS5 y PS4 incluyendo un aclamando juego de RoboCop</h2>
-                <img src="assets/Image/PSPLUS.jpg" alt="Imagen Secundaria">
+                <img src="assets/Image/PSPLUS.jpg" alt="Imagen de PS Plus Essential">
                 <p>Los juegos de abril de 2025 en PlayStation Plus Essential son tres en total y estarán disponibles para todos los suscriptores del servicio (independientemente del plan al que estén suscritos) el próximo martes 1 de abril. Estos son los videojuegos seleccionados:</p>
+                <a href="consolas.html" class="read-more">Leer más →</a>
             </article>
         </section>
 
+        <!-- Tercera noticia -->
         <section id="featured3">
             <article class="highlight3">
+                <div class="category-tag gaming">Gaming</div>
                 <h2>Los creadores de Disco Elysium ven una 'competencia amistosa' en los proyectos de exmiembros del estudio</h2>
-                <img src="assets/Image/Noticia13.jpg" alt="Tercera Imagen">
+                <img src="assets/Image/Noticia13.jpg" alt="Imagen de Disco Elysium">
                 <p>En los últimos años, tras la debacle de ZA/UM en 2021 y la marcha de muchos de los desarrolladores de Disco Elysium, varios estudios quieren ser el sucesor espiritual del RPG narrativo. Hopetown, XXX NIGHTSHIFT, Eternal Summer e incluso C4 de la propia ZA/UM (más una adaptación de Disco Elysium en móviles). La desarrolladora describe esta competencia de "amistosa".</p>
+                <a href="gaming.html" class="read-more">Leer más →</a>
             </article>
         </section>
 
-        <!-- Segunda columna de noticias (4, 5, 6) -->
+        <!-- Cuarta noticia -->
         <section id="featured4">
             <article class="highlight4">
+                <div class="category-tag reviews">Reviews</div>
                 <h2>Assassin's Creed Shadows zanja la polémica: ¿Quién mancha todo con pintura amarilla en los videojuegos?</h2>
-                <img src="assets/Image/Notice01.jpg.webp" alt="Cuarta Imagen">
+                <img src="assets/Image/Notice01.jpg.webp" alt="Imagen de Assassin's Creed Shadows">
                 <p>Ubisoft ha dado en el clavo con Assassin's Creed Shadows. El escepticismo después de varios retrasos a su fecha de estreno y algunas críticas de ciertos sectores del público no han impedido que se convierta en un éxito incuestionable.</p>
+                <a href="reviews.html" class="read-more">Leer más →</a>
             </article>
         </section>
 
+        <!-- Quinta noticia -->
         <section id="featured5">
             <article class="highlight5">
+                <div class="category-tag consolas">Consolas</div>
                 <h2>El expresidente de los estudios de PlayStation se sincera sobre por qué Sony cerró Japan Studio</h2>
-                <img src="assets/Image/god.jpg.webp" alt="Quinta Imagen">
+                <img src="assets/Image/god.jpg.webp" alt="Imagen de PlayStation Japan Studio">
                 <p>Sony cerró Japan Studio a principios de 2021. Parte del equipo se integró en un Team Asobi ampliado que el año pasado lanzó el galardonado Astro Bot. Otros desarrolladores se marcharon de SIE. Shuhei Yoshida, presidente de SIE Worldwide Studios hasta 2019, ha dejado claro en una entrevista con AV Watch el motivo de la decisión: el fabricante de PlayStation no quería videojuegos medianos, solo superproducciones (juegos AAA) capaces de vender consolas.</p>
+                <a href="consolas.html" class="read-more">Leer más →</a>
             </article>
         </section>
 
+        <!-- Sexta noticia -->
         <section id="featured6">
             <article class="highlight6">
+                <div class="category-tag reviews">Reviews</div>
                 <h2>Tiene 3000 reseñas extremadamente positivas en Steam y es un juego de motos de nieve para PC, PS5 y Xbox</h2>
-                <img src="assets/Image/god2.jpg.webp" alt="Sexta Imagen">
+                <img src="assets/Image/god2.jpg.webp" alt="Imagen de Sledders">
                 <p>La escena independiente del videojuego está supliendo en los últimos años los títulos deportivos de los que las grandes editoras han dejado de lado desde la época de los 128 bits. Desarrolladores indies se han hecho un hueco con simuladores de bicicletas de montaña, de snowboarding, y como es el caso que nos ocupa, de motos de nieve. Producido por Hanki Games, Sledders ha llegado a PS5, Xbox Series y PC el 20 de marzo tras pasar algo menos de año y medio en el acceso anticipado de Steam, donde acumula más de 3000 reseñas "extremadamente positivas".</p>
+                <a href="reviews.html" class="read-more">Leer más →</a>
+            </article>
+        </section>
+
+        <!-- Séptima noticia -->
+        <section id="featured7">
+            <article class="highlight7">
+                <div class="category-tag esports">Esports</div>
+                <h2>League of Legends: T1 se corona campeón del mundo por cuarta vez</h2>
+                <img src="assets/Image/esports1.jpg" alt="Imagen de T1 campeón del mundo">
+                <p>El equipo coreano T1 ha hecho historia al convertirse en el primer equipo en ganar cuatro títulos mundiales de League of Legends. En una final épica contra Weibo Gaming, Faker y compañía demostraron por qué son considerados la mejor organización de la historia del juego.</p>
+                <a href="esports.html" class="read-more">Leer más →</a>
+            </article>
+        </section>
+
+        <!-- Octava noticia -->
+        <section id="featured8">
+            <article class="highlight8">
+                <div class="category-tag esports">Esports</div>
+                <h2>CS2: FaZe Clan gana el Major de Katowice 2025</h2>
+                <img src="assets/Image/esports2.jpg" alt="Imagen de FaZe Clan campeón">
+                <p>FaZe Clan ha conseguido su segundo Major de CS2 al derrotar a NAVI en la final del IEM Katowice 2025. El equipo internacional, liderado por karrigan, ha demostrado una vez más su dominio en las competiciones más importantes del circuito.</p>
+                <a href="esports.html" class="read-more">Leer más →</a>
+            </article>
+        </section>
+
+        <!-- Novena noticia -->
+        <section id="featured9">
+            <article class="highlight9">
+                <div class="category-tag gaming">Gaming</div>
+                <h2>Cyberpunk 2077: Phantom Liberty - La expansión que redime al juego</h2>
+                <img src="assets/Image/Noticia4.jpg" alt="Imagen de Cyberpunk 2077 Phantom Liberty">
+                <p>La nueva expansión de Cyberpunk 2077 trae mejoras significativas y una historia cautivadora que reivindica el potencial del juego. Los jugadores se sumergen en una nueva aventura que expande el universo de Night City.</p>
+                <a href="gaming.html" class="read-more">Leer más →</a>
+            </article>
+        </section>
+
+        <!-- Décima noticia -->
+        <section id="featured10">
+            <article class="highlight10">
+                <div class="category-tag reviews">Reviews</div>
+                <h2>Review: Marvel's Spider-Man 2 - La secuela definitiva</h2>
+                <img src="assets/Image/Noticia1.jpg" alt="Imagen de Marvel's Spider-Man 2">
+                <p>Insomniac Games supera todas las expectativas con esta secuela que mejora cada aspecto del original. El combate, la historia y el mundo abierto alcanzan nuevos niveles de excelencia.</p>
+                <a href="reviews.html" class="read-more">Leer más →</a>
             </article>
         </section>
     </main>
-    <!-- Footer Principal -->
+
+    <!-- Footer - Pie de página -->
     <footer class="footer-principal">
         <!-- Contenedor del contenido del footer -->
         <div class="footer-contenido">
-            <!-- Logo y navegación -->
+            <!-- Sección del logo y navegación -->
             <div class="footer-logo-nav">
-                <!-- Logo -->
+                <!-- Logo del footer -->
                 <div class="logo-footer">
                     <img src="assets/Image/logo.png" alt="Logo del Periódico Digital">
                 </div>
 
-                <!-- Menú de navegación -->
+                <!-- Menú de navegación del footer -->
                 <nav class="footer-menu">
                     <ul>
-                        <li><a href="#">BUTTON</a></li>
-                        <li><a href="#">BUTTON</a></li>
-                        <li><a href="#">BUTTON</a></li>
-                        <li><a href="#">BUTTON</a></li>
+                        <li><a href="PeriodicoDigital.html">Inicio</a></li>
+                        <li><a href="gaming.html">Gaming</a></li>
+                        <li><a href="esports.html">Esports</a></li>
+                        <li><a href="consolas.html">Consolas</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
                     </ul>
                 </nav>
 
                 <!-- Iconos de redes sociales -->
                 <div class="redes-sociales">
-                    <a href="#"><img src="assets/Image/icons8-facebook-48.png" alt="Facebook"></a>
-                    <a href="#"><img src="assets/Image/icons8-twitter-48.png" alt="Twitter"></a>
-                    <a href="#"><img src="assets/Image/icons8-instagram-48.png" alt="Instagram"></a>
-                    <a href="#"><img src="assets/Image/icons8-twitch-48.png" alt="Twitch"></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitch"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
 
-            <!-- Copyright -->
+            <!-- Sección de copyright -->
             <div class="copyright">
-                <div class="icono-copyright"></div>
-                <p>2023 Estrella Inc. All rights reserved</p>
+                <p>&copy; 2025 Digital Gaming News. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
