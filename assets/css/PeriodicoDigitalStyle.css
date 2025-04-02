@@ -17,14 +17,18 @@
     --transition-normal: 0.5s ease; /* Transición normal */
 }
 
-/* Reset básico para eliminar estilos por defecto */
+/* ==========================================
+   SELECTORES CSS
+   ========================================== */
+
+/* Selector Universal */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* Incluye padding y border en el ancho/alto */
 }
 
-/* Estilos básicos del cuerpo de la página */
+/* Selector de Elemento */
 body {
     font-family: 'Inter', sans-serif; /* Fuente principal */
     line-height: 1.6;                /* Espaciado entre líneas */
@@ -34,7 +38,7 @@ body {
     padding: 0;
 }
 
-/* Estilos del Header Principal */
+/* Selector de Clase */
 .header-principal {
     /* Fondo con gradiente para más profundidad */
     background: linear-gradient(135deg, var(--color-primary), #2a2f4c);
@@ -46,7 +50,255 @@ body {
     z-index: 1000;                   /* Asegura que esté por encima de otros elementos */
 }
 
-/* Contenedor del header */
+/* Selector de ID */
+#formulario {
+    width: 100%;                    /* Ocupa el ancho disponible */
+    max-width: 500px;              /* Limita el ancho máximo */
+    padding: 30px;                 /* Espacio interno */
+    background: #ffffff;           /* Fondo blanco */
+    border-radius: 10px;           /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Selector de Descendiente */
+.menu-principal ul {
+    list-style: none;               /* Elimina viñetas */
+    display: flex;                  /* Flexbox para alineación horizontal */
+    gap: 40px;                      /* Espacio entre elementos */
+}
+
+/* Selector de Hijo Directo */
+.footer-menu > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 40px;
+}
+
+/* Selector de Atributo */
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario input[type="tel"],
+#formulario textarea {
+    width: 100%;                  /* Ancho completo */
+    padding: 10px;                /* Espacio interno */
+    border: 1px solid #ddd;       /* Borde suave */
+    border-radius: 5px;           /* Bordes redondeados */
+    font-size: 14px;             /* Tamaño de fuente */
+}
+
+/* Selector de Pseudo-clase */
+.menu-principal a:hover {
+    color: var(--color-text-hover); /* Cambia color al pasar el mouse */
+}
+
+/* Selector de Pseudo-elemento */
+.menu-principal a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-secondary);
+}
+
+/* ==========================================
+   MEDIA QUERIES
+   ========================================== */
+
+/* Media Query para Tablets */
+@media (max-width: 1200px) {
+    .header-container {
+        padding: 0 40px;            /* Mayor espaciado en pantallas grandes */
+    }
+    
+    .menu-principal ul {
+        gap: 30px;                  /* Menos espacio entre elementos */
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+}
+
+/* Media Query para Móviles */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px;            /* Menor espaciado en móviles */
+    }
+    
+    .menu-principal {
+        display: none;              /* Ocultar menú en móvil */
+    }
+    
+    .logo {
+        width: 120px;               /* Logo más pequeño en móvil */
+        height: 50px;
+    }
+
+    main {
+        grid-template-columns: 1fr;  /* 1 columna en móviles */
+        margin: 80px auto 20px;
+        padding: 0 15px;
+    }
+    
+    .highlight img, .highlight2 img, .highlight3 img, .highlight4 img, 
+    .highlight5 img, .highlight6 img, .highlight7 img, .highlight8 img, .highlight9 img, .highlight10 img {
+        height: 200px;              /* Imágenes más altas en móviles */
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .redes-sociales {
+        gap: 15px;
+    }
+
+    .redes-sociales a {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .carousel-container {
+        margin: 100px auto 20px;    /* Margen superior ajustado para móviles */
+        height: 300px;              /* Altura reducida en móviles */
+    }
+}
+
+/* Media Query para Móviles Pequeños */
+@media (max-width: 480px) {
+    .footer-principal {
+        padding: 30px 0 15px;
+    }
+
+    .logo-footer img {
+        width: 120px;
+        height: 50px;
+    }
+
+    .footer-menu a {
+        font-size: 14px;
+    }
+}
+
+/* ==========================================
+   ETIQUETAS HTML
+   ========================================== */
+
+/* Etiqueta <header> */
+.header-principal {
+    /* Fondo con gradiente para más profundidad */
+    background: linear-gradient(135deg, var(--color-primary), #2a2f4c);
+    box-shadow: var(--shadow-md);    /* Sombra para elevación */
+    position: fixed;                 /* Fijo en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;                   /* Asegura que esté por encima de otros elementos */
+}
+
+/* Etiqueta <nav> */
+.menu-principal {
+    margin: 0 auto;                 /* Centrado */
+}
+
+/* Etiqueta <main> */
+main {
+    display: grid;                  /* Grid para mejor organización */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 25px;                      /* Más espacio entre noticias */
+    max-width: 1200px;              /* Ancho máximo */
+    margin: 100px auto 20px;        /* Margen superior para el header */
+    padding: 0 20px;                /* Espaciado lateral */
+}
+
+/* Etiqueta <footer> */
+.footer-principal {
+    width: 100%;
+    background: #1a1f3c;
+    position: relative;
+    padding: 40px 0 20px;
+    margin-top: 50px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiqueta <img> */
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;            /* Mantiene proporción de la imagen */
+    transition: transform var(--transition-fast); /* Transición suave */
+}
+
+/* Etiqueta <a> */
+.menu-principal a {
+    color: var(--color-text);       /* Color del texto */
+    text-decoration: none;          /* Elimina subrayado */
+    font-weight: 500;               /* Peso de la fuente */
+    font-size: 16px;                /* Tamaño de fuente */
+    padding: 8px 0;                 /* Espaciado vertical */
+    display: flex;                  /* Flexbox para alineación */
+    align-items: center;            /* Centrado vertical */
+    gap: 8px;                       /* Espacio entre icono y texto */
+    transition: color var(--transition-fast); /* Transición suave */
+}
+
+/* Etiqueta <h2> */
+.highlight h2, .highlight2 h2, .highlight3 h2, .highlight4 h2, .highlight5 h2, .highlight6 h2, .highlight7 h2, .highlight8 h2, .highlight9 h2, .highlight10 h2 {
+    font-size: 14px;                /* Tamaño de fuente más pequeño */
+    color: #1a1f3c;                 /* Color del texto */
+    margin: 0;                      /* Elimina márgenes */
+    line-height: 1.4;               /* Interlineado */
+}
+
+/* Etiqueta <p> */
+.highlight p, .highlight2 p, .highlight3 p, .highlight4 p, .highlight5 p, .highlight6 p, .highlight7 p, .highlight8 p, .highlight9 p, .highlight10 p {
+    font-size: 12px;                /* Tamaño de fuente más pequeño */
+    line-height: 1.3;               /* Espaciado entre líneas reducido */
+    color: #666666;                 /* Color del texto */
+    margin: 0;                      /* Elimina márgenes */
+    flex-grow: 1;                   /* Ocupa espacio disponible */
+}
+
+/* Etiqueta <form> */
+#formulario form {
+    display: flex;                 /* Usamos flexbox */
+    flex-direction: column;        /* Organiza elementos en columna */
+    gap: 15px;                    /* Espacio entre elementos */
+}
+
+/* Etiqueta <label> */
+#formulario label {
+    font-weight: 500;             /* Peso de la fuente */
+    color: #333333;               /* Color del texto */
+    margin-bottom: 5px;           /* Espacio debajo de etiquetas */
+}
+
+/* Etiqueta <input> */
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario input[type="tel"],
+#formulario textarea {
+    width: 100%;                  /* Ancho completo */
+    padding: 10px;                /* Espacio interno */
+    border: 1px solid #ddd;       /* Borde suave */
+    border-radius: 5px;           /* Bordes redondeados */
+    font-size: 14px;             /* Tamaño de fuente */
+}
+
+/* Etiqueta <textarea> */
+#formulario textarea {
+    resize: vertical;             /* Solo permite redimensionar verticalmente */
+    min-height: 100px;           /* Altura mínima */
+}
+
+/* Estilos del Header Principal */
 .header-container {
     max-width: 1400px;              /* Ancho máximo para mejor legibilidad */
     margin: 0 auto;                 /* Centrado */
@@ -67,13 +319,6 @@ body {
     text-decoration: none;          /* Elimina subrayado del enlace */
 }
 
-.logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;            /* Mantiene proporción de la imagen */
-    transition: transform var(--transition-fast); /* Transición suave */
-}
-
 /* Efecto hover en el logo */
 .logo img:hover {
     transform: scale(1.05);         /* Escala ligeramente al pasar el mouse */
@@ -84,29 +329,6 @@ body {
     margin: 0 auto;                 /* Centrado */
 }
 
-.menu-principal ul {
-    list-style: none;               /* Elimina viñetas */
-    display: flex;                  /* Flexbox para alineación horizontal */
-    gap: 40px;                      /* Espacio entre elementos */
-}
-
-.menu-principal a {
-    color: var(--color-text);       /* Color del texto */
-    text-decoration: none;          /* Elimina subrayado */
-    font-weight: 500;               /* Peso de la fuente */
-    font-size: 16px;                /* Tamaño de fuente */
-    padding: 8px 0;                 /* Espaciado vertical */
-    display: flex;                  /* Flexbox para alineación */
-    align-items: center;            /* Centrado vertical */
-    gap: 8px;                       /* Espacio entre icono y texto */
-    transition: color var(--transition-fast); /* Transición suave */
-}
-
-/* Efecto hover en los enlaces */
-.menu-principal a:hover {
-    color: var(--color-text-hover); /* Cambia color al pasar el mouse */
-}
-
 /* Enlace activo */
 .menu-principal a.active {
     color: var(--color-secondary);  /* Color especial para enlace activo */
@@ -114,21 +336,10 @@ body {
     position: relative;             /* Para el indicador */
 }
 
-/* Línea indicadora del enlace activo */
-.menu-principal a.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-secondary);
-}
-
 /* Estilos del Botón de Contacto */
 .boton-contacto {
     background: linear-gradient(135deg, var(--color-secondary), #357abd); /* Gradiente */
-    border-radius: 25px;            /* Bordes redondeados */
+    border-radius: 15px;            /* Bordes redondeados */
     box-shadow: var(--shadow-sm);    /* Sombra suave */
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -152,132 +363,21 @@ body {
 
 /* Media queries para responsividad */
 @media (max-width: 1200px) {
-    .header-container {
-        padding: 0 40px;            /* Mayor espaciado en pantallas grandes */
-    }
-    
-    .menu-principal ul {
-        gap: 30px;                  /* Menos espacio entre elementos */
+    main {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
     }
 }
 
 @media (max-width: 768px) {
-    .header-container {
-        padding: 0 20px;            /* Menor espaciado en móviles */
+    main {
+        grid-template-columns: 1fr;  /* 1 columna en móviles */
+        margin: 80px auto 20px;
+        padding: 0 15px;
     }
     
-    .menu-principal {
-        display: none;              /* Ocultar menú en móvil */
-    }
-    
-    .logo {
-        width: 120px;               /* Logo más pequeño en móvil */
-        height: 50px;
-    }
-
-    .carousel-container {
-        margin: 100px auto 20px;    /* Margen superior ajustado para móviles */
-        height: 300px;              /* Altura reducida en móviles */
-    }
-}
-
-/* Contenedor principal del formulario */
-.main-formulario {
-    display: flex;                  /* Usamos flexbox para centrar */
-    justify-content: center;        /* Centra horizontalmente */
-    padding: 20px;                  /* Espacio alrededor */
-    margin-top: 100px;             /* Espacio para el header fijo */
-}
-
-/* Estilos del formulario */
-#formulario {
-    width: 100%;                    /* Ocupa el ancho disponible */
-    max-width: 500px;              /* Limita el ancho máximo */
-    padding: 30px;                 /* Espacio interno */
-    background: #ffffff;           /* Fondo blanco */
-    border-radius: 10px;           /* Bordes redondeados */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra suave */
-}
-
-/* Título del formulario */
-#formulario h2 {
-    text-align: center;            /* Centra el texto */
-    margin-bottom: 30px;           /* Espacio debajo del título */
-    color: #1a1f3c;               /* Color del texto */
-    font-size: 24px;              /* Tamaño de fuente */
-}
-
-/* Contenedor del formulario */
-#formulario form {
-    display: flex;                 /* Usamos flexbox */
-    flex-direction: column;        /* Organiza elementos en columna */
-    gap: 15px;                    /* Espacio entre elementos */
-}
-
-/* Etiquetas de los campos */
-#formulario label {
-    font-weight: 500;             /* Peso de la fuente */
-    color: #333333;               /* Color del texto */
-    margin-bottom: 5px;           /* Espacio debajo de etiquetas */
-}
-
-/* Campos de entrada y área de texto */
-#formulario input[type="text"],
-#formulario input[type="email"],
-#formulario input[type="tel"],
-#formulario textarea {
-    width: 100%;                  /* Ancho completo */
-    padding: 10px;                /* Espacio interno */
-    border: 1px solid #ddd;       /* Borde suave */
-    border-radius: 5px;           /* Bordes redondeados */
-    font-size: 14px;             /* Tamaño de fuente */
-}
-
-/* Estilo al enfocar los campos */
-#formulario input:focus,
-#formulario textarea:focus {
-    outline: none;                /* Quita el contorno por defecto */
-    border-color: #4a90e2;       /* Borde azul al enfocar */
-    box-shadow: 0 0 5px rgba(74,144,226,0.2); /* Sombra suave al enfocar */
-}
-
-/* Área de texto */
-#formulario textarea {
-    resize: vertical;             /* Solo permite redimensionar verticalmente */
-    min-height: 100px;           /* Altura mínima */
-}
-
-/* Campo de archivo */
-#formulario input[type="file"] {
-    padding: 5px 0;              /* Espacio arriba y abajo */
-}
-
-/* Botón de envío */
-#formulario button {
-    width: 100%;                 /* Ancho completo */
-    padding: 12px;               /* Espacio interno */
-    background: #4a90e2;         /* Color de fondo */
-    color: white;                /* Color del texto */
-    border: none;                /* Sin borde */
-    border-radius: 5px;          /* Bordes redondeados */
-    font-size: 16px;            /* Tamaño de fuente */
-    cursor: pointer;             /* Cursor tipo mano */
-    transition: background-color 0.3s; /* Transición suave */
-}
-
-/* Efecto hover en el botón */
-#formulario button:hover {
-    background: #357abd;         /* Color más oscuro al pasar el mouse */
-}
-
-/* Responsive para móviles */
-@media (max-width: 768px) {
-    .main-formulario {
-        padding: 15px;           /* Menos espacio en móviles */
-    }
-    
-    #formulario {
-        padding: 20px;           /* Menos padding en móviles */
+    .highlight img, .highlight2 img, .highlight3 img, .highlight4 img, 
+    .highlight5 img, .highlight6 img, .highlight7 img, .highlight8 img, .highlight9 img, .highlight10 img {
+        height: 200px;              /* Imágenes más altas en móviles */
     }
 }
 
@@ -306,7 +406,7 @@ main {
 /* Efecto hover en las tarjetas */
 #featured:hover, #featured2:hover, #featured3:hover, #featured4:hover, 
 #featured5:hover, #featured6:hover, #featured7:hover, #featured8:hover, #featured9:hover, #featured10:hover {
-    transform: translateY(-5px);     /* Se eleva ligeramente */
+   transform: translateY(-5px);     /* Se eleva ligeramente */
 }
 
 /* Estilos para los artículos */
@@ -323,23 +423,6 @@ main {
     height: 150px;                  /* Altura fija más pequeña */
     object-fit: cover;              /* Cubre el espacio disponible */
     border-radius: 8px;             /* Bordes redondeados */
-}
-
-/* Estilos para los títulos */
-.highlight h2, .highlight2 h2, .highlight3 h2, .highlight4 h2, .highlight5 h2, .highlight6 h2, .highlight7 h2, .highlight8 h2, .highlight9 h2, .highlight10 h2 {
-    font-size: 14px;                /* Tamaño de fuente más pequeño */
-    color: #1a1f3c;                 /* Color del texto */
-    margin: 0;                      /* Elimina márgenes */
-    line-height: 1.4;               /* Interlineado */
-}
-
-/* Estilos para los párrafos */
-.highlight p, .highlight2 p, .highlight3 p, .highlight4 p, .highlight5 p, .highlight6 p, .highlight7 p, .highlight8 p, .highlight9 p, .highlight10 p {
-    font-size: 12px;                /* Tamaño de fuente más pequeño */
-    line-height: 1.3;               /* Espaciado entre líneas reducido */
-    color: #666666;                 /* Color del texto */
-    margin: 0;                      /* Elimina márgenes */
-    flex-grow: 1;                   /* Ocupa espacio disponible */
 }
 
 /* Estilos para las etiquetas de categoría */
@@ -388,37 +471,7 @@ main {
     color: #357abd;                 /* Color más oscuro al hover */
 }
 
-/* Media queries para responsividad */
-@media (max-width: 1200px) {
-    main {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
-    }
-}
-
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr;  /* 1 columna en móviles */
-        margin: 80px auto 20px;
-        padding: 0 15px;
-    }
-    
-    .highlight img, .highlight2 img, .highlight3 img, .highlight4 img, 
-    .highlight5 img, .highlight6 img, .highlight7 img, .highlight8 img, .highlight9 img, .highlight10 img {
-        height: 200px;              /* Imágenes más altas en móviles */
-    }
-}
-
 /* Estilos del Footer Principal */
-.footer-principal {
-    width: 100%;
-    background: #1a1f3c;
-    position: relative;
-    padding: 40px 0 20px;
-    margin-top: 50px;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Contenedor del contenido del footer */
 .footer-contenido {
     max-width: 1200px;
     margin: 0 auto;
@@ -451,15 +504,6 @@ main {
 }
 
 /* Menú de navegación del footer */
-.footer-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 40px;
-}
-
-/* Enlaces del menú del footer */
 .footer-menu a {
     color: white;
     text-decoration: none;
@@ -531,149 +575,130 @@ main {
     margin: 0;
 }
 
-/* Media queries para el footer */
-@media (max-width: 768px) {
-    .footer-menu ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .redes-sociales {
-        gap: 15px;
-    }
-
-    .redes-sociales a {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-principal {
-        padding: 30px 0 15px;
-    }
-
-    .logo-footer img {
-        width: 120px;
-        height: 50px;
-    }
-
-    .footer-menu a {
-        font-size: 14px;
-    }
-}
-
 /* Estilos del Carrusel */
 .carousel-container {
-    position: relative;             /* Posicionamiento relativo */
-    width: 90%;                     /* Ancho del 90% */
-    height: 400px;                  /* Altura fija */
-    margin: 120px auto 20px;        /* Margen superior aumentado para compensar el header fijo */
-    overflow: hidden;               /* Oculta contenido que se desborda */
-    border-radius: 10px;            /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 400px;
+    margin: 120px auto 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Contenedor de las diapositivas */
 .carousel-slides {
-    display: flex;                  /* Flexbox */
-    width: 300%;                    /* Ancho para 3 diapositivas */
-    height: 100%;                   /* Altura completa */
-    transition: transform 0.5s ease-in-out; /* Transición suave */
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
 }
 
 /* Estilos de cada diapositiva */
 .slide {
-    width: 33.333%;                 /* Ancho de 1/3 */
-    height: 100%;                   /* Altura completa */
-    position: relative;             /* Posicionamiento relativo */
+    width: 33.333%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Imagen de la diapositiva */
 .slide img {
-    width: 100%;                    /* Ancho completo */
-    height: 100%;                   /* Alto completo */
-    object-fit: cover;              /* Cubre el espacio disponible */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 /* Contenido de la diapositiva */
 .slide-content {
-    position: absolute;             /* Posicionamiento absoluto */
-    bottom: 0;                      /* Alineado al fondo */
-    left: 0;                        /* Alineado a la izquierda */
-    right: 0;                       /* Alineado a la derecha */
-    padding: 20px;                  /* Espaciado interno */
-    background: linear-gradient(transparent, rgba(0,0,0,0.8)); /* Gradiente oscuro */
-    color: white;                   /* Color del texto */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
 }
 
 /* Título de la diapositiva */
 .slide-content h2 {
-    font-size: 24px;                /* Tamaño de fuente */
-    margin-bottom: 10px;            /* Espacio inferior */
-    color: white;                   /* Color del texto */
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 /* Párrafo de la diapositiva */
 .slide-content p {
-    font-size: 16px;                /* Tamaño de fuente */
-    margin: 0;                      /* Sin márgenes */
+    font-size: 16px;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
 /* Botones de navegación */
 .carousel-button {
-    position: absolute;             /* Posicionamiento absoluto */
-    top: 50%;                       /* Centrado vertical */
-    transform: translateY(-50%);    /* Ajuste fino del centrado */
-    background: rgba(0,0,0,0.5);    /* Fondo semi-transparente */
-    color: white;                   /* Color del texto */
-    border: none;                   /* Sin borde */
-    padding: 15px;                  /* Espaciado interno */
-    cursor: pointer;                /* Cursor tipo mano */
-    font-size: 20px;                /* Tamaño de fuente */
-    border-radius: 50%;             /* Forma circular */
-    transition: background 0.3s ease; /* Transición suave */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
 /* Posicionamiento de los botones */
 .carousel-button.prev {
-    left: 20px;                     /* Botón anterior a la izquierda */
+    left: 20px;
 }
 
 .carousel-button.next {
-    right: 20px;                    /* Botón siguiente a la derecha */
+    right: 20px;
 }
 
 /* Efecto hover en los botones */
 .carousel-button:hover {
-    background: rgba(0,0,0,0.8);    /* Fondo más oscuro al hover */
+    background: rgba(0,0,0,0.8);
+    transform: translateY(-50%) scale(1.1);
 }
 
 /* Indicadores de diapositiva */
 .carousel-indicators {
-    position: absolute;             /* Posicionamiento absoluto */
-    bottom: 20px;                   /* Alineado al fondo */
-    left: 50%;                      /* Centrado horizontal */
-    transform: translateX(-50%);    /* Ajuste fino del centrado */
-    display: flex;                  /* Flexbox */
-    gap: 10px;                      /* Espacio entre indicadores */
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
 }
 
 /* Estilos de cada indicador */
 .indicator {
-    width: 12px;                    /* Ancho del indicador */
-    height: 12px;                   /* Alto del indicador */
-    border-radius: 50%;             /* Forma circular */
-    background: rgba(255,255,255,0.5); /* Color semi-transparente */
-    cursor: pointer;                /* Cursor tipo mano */
-    transition: background 0.3s ease; /* Transición suave */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 /* Indicador activo */
 .indicator.active {
-    background: white;              /* Color blanco para el activo */
+    background: white;
+    transform: scale(1.2);
 }
 
 /* Animación automática del carrusel */
@@ -686,12 +711,60 @@ main {
 
 /* Aplicación de la animación */
 .carousel-slides {
-    animation: slideShow 15s infinite; /* Animación infinita de 15 segundos */
+    animation: slideShow 15s infinite;
 }
 
 /* Pausa la animación al hover */
 .carousel-container:hover .carousel-slides {
-    animation-play-state: paused;    /* Pausa al pasar el mouse */
+    animation-play-state: paused;
+}
+
+/* Media queries para el carrusel */
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 300px;
+        margin: 100px auto 20px;
+    }
+
+    .slide-content h2 {
+        font-size: 20px;
+    }
+
+    .slide-content p {
+        font-size: 14px;
+    }
+
+    .carousel-button {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        height: 250px;
+        margin: 80px auto 20px;
+    }
+
+    .slide-content h2 {
+        font-size: 18px;
+    }
+
+    .slide-content p {
+        font-size: 12px;
+    }
+
+    .carousel-button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
 }
 
 /* Estilos para la sección de categorías */
