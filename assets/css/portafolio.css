@@ -8,15 +8,22 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #111111;
+    background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.15), rgba(17, 17, 17, 1) 50%),
+                linear-gradient(180deg, #111111 0%, #111111 100%);
     color: white;
+    min-height: 100vh;
 }
 
 /* Header */
 .header {
     width: 100%;
     height: 98px;
-    background: linear-gradient(rgba(23,23,25,1), rgba(23,23,25,0));
+    background: linear-gradient(to bottom,
+        rgba(23, 23, 25, 0.95) 0%,
+        rgba(32, 32, 35, 0.8) 50%,
+        rgba(23, 23, 25, 0) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     opacity: 1;
     position: fixed;
     top: 0;
@@ -26,6 +33,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 79px;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
 }
 
 .logo {
@@ -81,7 +89,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 79px;
-    padding-top: 98px;
+    padding-top: 3px;
 }
 
 .content-wrapper {
@@ -95,28 +103,29 @@ body {
 
 .text-content {
     max-width: 600px;
+    
 }
 
 h1 {
     font-family: Montserrat;
     font-weight: Bold;
     font-size: 40px;
-    margin-bottom: 8px;
-    letter-spacing: 1px;
+    margin: 0;
+    letter-spacing: 2px;
 }
 
 h2 {
     font-family: Montserrat;
     font-weight: Regular;
     font-size: 32px;
-    margin-bottom: 4px;
+    margin: 0;
 }
 
 h3 {
     font-family: Montserrat;
     font-size: 28px;
     color: #8B5CF6;
-    margin-bottom: 32px;
+    margin: 0 0 32px 0;
 }
 
 p {
@@ -124,7 +133,7 @@ p {
     font-size: 16px;
     line-height: 1.8;
     color: rgba(255,255,255,0.8);
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .buttons {
@@ -266,5 +275,127 @@ p {
     .photo-circle::before {
         width: 270px;
         height: 270px;
+    }
+}
+
+/* Sección de Habilidades */
+.skills-section {
+    padding: 100px 0;
+    background: linear-gradient(rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.95));
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: white;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #8B5CF6;
+    border-radius: 2px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 20px;
+}
+
+.skill-category {
+    background: rgba(30, 30, 30, 0.5);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.1);
+}
+
+.skill-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+.skill-header i {
+    font-size: 24px;
+    color: #8B5CF6;
+}
+
+.skill-header h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-item {
+    width: 100%;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #8B5CF6, #A78BFA);
+    border-radius: 4px;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-category {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 } 
