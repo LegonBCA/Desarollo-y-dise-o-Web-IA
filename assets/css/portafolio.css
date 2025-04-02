@@ -1,41 +1,55 @@
-/* Reset y estilos generales */
+/* ==========================================
+   Reseteo y estilos generales - Configuración básica
+   ========================================== */
 * {
+    /* Asegura que el padding y border no aumenten el tamaño total */
     box-sizing: border-box;
 }
 
 body {
+    /* Configuración básica del cuerpo de la página */
     font-size: 14px;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    /* Fondo con gradiente radial y linear para efecto de profundidad */
     background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.15), rgba(17, 17, 17, 1) 50%),
                 linear-gradient(180deg, #111111 0%, #111111 100%);
     color: white;
     min-height: 100vh;
 }
 
-/* Header */
-.header {
+/* ==========================================
+   Encabezado - Barra de navegación superior
+   ========================================== */
+.encabezado {
+    /* Configuración del encabezado fijo */
     width: 100%;
     height: 98px;
+    /* Gradiente para efecto de transparencia */
     background: linear-gradient(to bottom,
         rgba(23, 23, 25, 0.95) 0%,
         rgba(32, 32, 35, 0.8) 50%,
         rgba(23, 23, 25, 0) 100%);
+    /* Efecto de desenfoque para el fondo */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     opacity: 1;
+    /* Posicionamiento fijo en la parte superior */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
+    /* Disposición de elementos */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 79px;
+    /* Borde inferior sutil */
     border-bottom: 1px solid rgba(139, 92, 246, 0.1);
 }
 
+/* Estilo del logo */
 .logo {
     font-family: Montserrat;
     font-weight: Bold;
@@ -43,7 +57,9 @@ body {
     color: white;
 }
 
-.nav-menu ul {
+/* Menú de navegación */
+.menu-navegacion ul {
+    /* Disposición horizontal de los elementos del menú */
     display: flex;
     list-style: none;
     gap: 52px;
@@ -51,7 +67,8 @@ body {
     padding: 0;
 }
 
-.nav-menu a {
+.menu-navegacion a {
+    /* Estilo de los enlaces del menú */
     color: white;
     text-decoration: none;
     font-family: Montserrat;
@@ -60,11 +77,13 @@ body {
     transition: color 0.3s ease;
 }
 
-.nav-menu a:hover {
+.menu-navegacion a:hover {
+    /* Efecto al pasar el mouse sobre los enlaces */
     color: #8B5CF6;
 }
 
-.hablame {
+/* Botón de contacto (WhatsApp) */
+.boton-contacto {
     width: 43px;
     height: 43px;
     display: flex;
@@ -73,18 +92,23 @@ body {
     transition: transform 0.3s ease;
 }
 
-.hablame:hover {
+.boton-contacto:hover {
+    /* Efecto de escala al pasar el mouse */
     transform: scale(1.1);
 }
 
-.hablame img {
+.boton-contacto img {
+    /* Ajuste de la imagen del botón */
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Contenido principal */
-.main-content {
+/* ==========================================
+   Contenido principal - Sección de inicio
+   ========================================== */
+.contenido-principal {
+    /* Configuración del contenedor principal */
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -92,7 +116,8 @@ body {
     padding-top: 3px;
 }
 
-.content-wrapper {
+.contenedor-contenido {
+    /* Disposición del contenido principal */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,11 +126,12 @@ body {
     margin: 0 auto;
 }
 
-.text-content {
+.contenido-texto {
+    /* Límite de ancho para el texto */
     max-width: 600px;
-    
 }
 
+/* Estilos de los encabezados */
 h1 {
     font-family: Montserrat;
     font-weight: Bold;
@@ -128,6 +154,7 @@ h3 {
     margin: 0 0 32px 0;
 }
 
+/* Estilo del párrafo principal */
 p {
     font-family: Montserrat;
     font-size: 16px;
@@ -136,13 +163,15 @@ p {
     margin-bottom: 20px;
 }
 
-.buttons {
+/* Sección de botones */
+.botones {
     display: flex;
     align-items: center;
     gap: 32px;
 }
 
-.download-cv {
+/* Botón de descarga CV */
+.descargar-cv {
     padding: 12px 32px;
     background-color: #8B5CF6;
     color: white;
@@ -155,31 +184,37 @@ p {
     border: 2px solid #8B5CF6;
 }
 
-.download-cv:hover {
+.descargar-cv:hover {
+    /* Efecto al pasar el mouse sobre el botón */
     background-color: transparent;
     border-color: #8B5CF6;
     transform: translateY(-2px);
 }
 
-.social-links {
+/* Iconos de redes sociales */
+.redes-sociales {
     display: flex;
     gap: 24px;
 }
 
-.social-links img {
+.redes-sociales img {
     width: 24px;
     height: 24px;
     opacity: 0.8;
     transition: all 0.3s ease;
 }
 
-.social-links a:hover img {
+.redes-sociales a:hover img {
+    /* Efecto al pasar el mouse sobre los iconos */
     opacity: 1;
     transform: translateY(-2px);
 }
 
-/* Círculo para la foto */
-.photo-circle {
+/* ==========================================
+   Círculo para la foto de perfil
+   ========================================== */
+.foto-circulo {
+    /* Contenedor circular para la foto */
     width: 400px;
     height: 400px;
     border-radius: 50%;
@@ -189,14 +224,16 @@ p {
     background-color: rgba(139, 92, 246, 0.1);
 }
 
-.photo-circle img {
+.foto-circulo img {
+    /* Ajuste de la imagen dentro del círculo */
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Decoración adicional */
-.photo-circle::before {
+/* Efecto decorativo del círculo */
+.foto-circulo::before {
+    /* Borde punteado animado */
     content: '';
     position: absolute;
     width: 420px;
@@ -205,10 +242,11 @@ p {
     border-radius: 50%;
     top: -10px;
     left: -10px;
-    animation: rotate 20s linear infinite;
+    animation: rotar 20s linear infinite;
 }
 
-@keyframes rotate {
+/* Animación de rotación */
+@keyframes rotar {
     from {
         transform: rotate(0deg);
     }
@@ -217,185 +255,339 @@ p {
     }
 }
 
-/* Responsive */
+/* ==========================================
+   Diseño responsivo - Adaptación a diferentes pantallas
+   ========================================== */
 @media (max-width: 1200px) {
-    .content-wrapper {
+    /* Ajustes para pantallas medianas */
+    .contenedor-contenido {
         flex-direction: column;
         text-align: center;
         gap: 40px;
     }
 
-    .text-content {
+    .contenido-texto {
         margin: 0 auto;
     }
 
-    .buttons {
+    .botones {
         justify-content: center;
     }
 
-    .photo-circle {
+    .foto-circulo {
         width: 300px;
         height: 300px;
     }
 
-    .photo-circle::before {
+    .foto-circulo::before {
         width: 320px;
         height: 320px;
     }
 }
 
 @media (max-width: 768px) {
-    .header {
+    /* Ajustes para dispositivos móviles */
+    .encabezado {
         height: auto;
         padding: 20px;
         flex-direction: column;
     }
 
-    .nav-menu ul {
+    .menu-navegacion ul {
         flex-direction: column;
         align-items: center;
         gap: 20px;
     }
 
-    .hablame {
+    .boton-contacto {
         position: fixed;
         bottom: 20px;
         right: 20px;
     }
 
-    .main-content {
+    .contenido-principal {
         padding: 120px 20px 40px;
     }
 
-    .photo-circle {
+    .foto-circulo {
         width: 250px;
         height: 250px;
     }
 
-    .photo-circle::before {
+    .foto-circulo::before {
         width: 270px;
         height: 270px;
     }
 }
 
-/* Sección de Habilidades */
-.skills-section {
+/* ==========================================
+   Sección de Habilidades
+   ========================================== */
+/* Título de la sección */
+.titulo-seccion {
+    display: flex;
+    justify-content: center;
+    font-weight: Bold;
+    font-size: 40px;
+    margin-bottom: 70px;
+}
+
+/* Contenedor principal de habilidades */
+.seccion-habilidades {
     padding: 100px 0;
     background: linear-gradient(rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.95));
+    
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    color: white;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: #8B5CF6;
-    border-radius: 2px;
-}
-
-.skills-container {
+/* Grid de categorías de habilidades */
+.contenedor-habilidades {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     padding: 20px;
+    list-style: none;
 }
 
-.skill-category {
+/* Tarjetas de categorías */
+.categoria-habilidad {
     background: rgba(30, 30, 30, 0.5);
     border-radius: 15px;
     padding: 30px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(139, 92, 246, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.skill-category:hover {
+.categoria-habilidad:hover {
+    /* Efecto de elevación al pasar el mouse */
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.1);
 }
 
-.skill-header {
+/* Encabezado de categoría */
+.categoria-habilidad h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
     display: flex;
     align-items: center;
-    margin-bottom: 25px;
     gap: 15px;
 }
 
-.skill-header i {
-    font-size: 24px;
+.categoria-habilidad h3 i {
+    /* Iconos de categorías */
     color: #8B5CF6;
 }
 
-.skill-header h3 {
-    color: white;
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-.skill-list {
+/* Lista de habilidades */
+.lista-habilidades {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
-.skill-item {
-    width: 100%;
+.lista-habilidades li {
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
 }
 
-.skill-info {
+/* Nombre y porcentaje de la habilidad */
+.lista-habilidades span {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8px;
-    color: #fff;
-    font-size: 0.9rem;
+    margin-bottom: 5px;
 }
 
-.progress-bar {
+.lista-habilidades span::after {
+    /* Muestra el porcentaje */
+    content: attr(data-progress);
+    color: #8B5CF6;
+}
+
+/* Barra de progreso */
+.barra-progreso {
+    margin-top: 8px;
     width: 100%;
     height: 8px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     overflow: hidden;
+    position: relative;
 }
 
-.progress {
+/* Indicador de progreso */
+.progreso {
     height: 100%;
     background: linear-gradient(90deg, #8B5CF6, #A78BFA);
     border-radius: 4px;
     transition: width 1.5s ease-in-out;
+    position: relative;
 }
 
-/* Media Queries para Responsividad */
+.progreso::after {
+    /* Porcentaje en la barra */
+    content: attr(data-progress);
+    position: absolute;
+    right: -25px;
+    top: -20px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Responsividad de la sección de habilidades */
 @media (max-width: 768px) {
-    .skills-container {
+    .contenedor-habilidades {
         grid-template-columns: 1fr;
     }
+}
 
-    .skill-category {
-        padding: 20px;
+/* ==========================================
+   Sección de Contacto
+   ========================================== */
+.seccion-contacto {
+    padding: 100px 0;
+    background: linear-gradient(rgba(17, 17, 17, 0.97), rgba(17, 17, 17, 0.95));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor principal del formulario */
+.contenedor-formulario {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(30, 30, 30, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+/* Encabezado del formulario */
+.encabezado-formulario {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-contacto {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.subtitulo-contacto {
+    color: #8B5CF6;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Contenedor de campos del formulario */
+.campos-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Estilos para los campos de entrada */
+.campo-formulario {
+    width: 100%;
+}
+
+.campo-formulario input,
+.campo-formulario select {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus {
+    outline: none;
+    border-color: #8B5CF6;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.campo-formulario input::placeholder,
+.campo-formulario select {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Área de texto para detalles del proyecto */
+.area-detalles {
+    width: 100%;
+}
+
+.area-detalles textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+.area-detalles textarea:focus {
+    outline: none;
+    border-color: #8B5CF6;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.area-detalles textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Contenedor del botón de envío */
+.contenedor-boton {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.boton-enviar {
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid #8B5CF6;
+    color: #8B5CF6;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background: #8B5CF6;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsividad del formulario */
+@media (max-width: 768px) {
+    .contenedor-formulario {
+        padding: 30px 20px;
+        margin: 0 20px;
     }
 
-    .section-title {
+    .titulo-contacto {
         font-size: 2rem;
+    }
+
+    .subtitulo-contacto {
+        font-size: 1rem;
     }
 } 
